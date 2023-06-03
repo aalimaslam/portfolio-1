@@ -1,0 +1,30 @@
+.h1, .h1-argaham, .h1-poppins{
+    font-size: 3rem;
+}
+.h1-argaham, .h2-argaham, .h3-argaham, .h4-argaham, .h5-argaham, .h6-argaham{
+    font-family:"Argaham";
+}
+.h1-poppins, .h2-poppins, .h3-poppins, .h4-poppins, .h5-poppins, .h6-poppins{
+    font-family: 'Poppins', sans-serif;
+}
+.h2, .h2-argaham, .h2-poppins{
+    font-size: 2rem;
+}
+
+
+.h3, .h3-argaham, .h3-poppins{
+    font-size: 1.5rem;
+}
+.h4, .h4-argaham, .h4-poppins{
+    font-size: 1.25rem;
+}
+
+.h5, .h5-argaham, .h5-poppins{
+    font-size: 1rem;
+}
+.h6, .h6-argaham, .h6-poppins{
+    font-size: 0.875rem;
+}
+.p, .p-argaham, .p-poppins{
+    font-size: 1rem;
+}

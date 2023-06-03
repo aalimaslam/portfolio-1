@@ -1,0 +1,160 @@
+<div class="hero place-center flex-column">
+    <div class="play-pause-btn"><i class="fas fa-pause"></i></div>
+    <div class="title">
+        <h1 class="h1-argaham animate__animated animate__fadeInUp bold">aalimaslam.</h1>
+        <div class="h6-poppins animate__animated animate__fadeInUp">Frontend Developer</div>
+        <div class="scroll-animate align-center">
+            <div class="scroll-inner place-center">
+                <div class="scroll-seperator"><img src="/images/seperator.svg" height="15px" /></div>
+                <div class="scroll-text">Web Developer</div>
+                <div class="scroll-seperator"><img src="/images/seperator.svg" height="15px" /></div>
+                <div class="scroll-text">Graphic Designer</div>
+                <div class="scroll-seperator"><img src="/images/seperator.svg" height="15px" /></div>
+                <div class="scroll-text">Problem Solver</div>
+                <div class="scroll-seperator"><img src="/images/seperator.svg" height="15px" /></div>
+                <div class="scroll-text">Tech Enthusiast</div>
+                <div class="scroll-seperator"><img src="/images/seperator.svg" height="15px" /></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="description animate__animated animate__zoomIn helper" >
+        Crafting <em class="color-primary">Businesses</em> with <span class="bold">Code</span>
+    </div>
+    <div class="btn-container">
+        <a href="/Resume-Aalim-aslam.pdf" style="text-decoration: none;" download class="btn btn-primary bold">Download CV</a>
+        <div style="text-align:center;">
+            <a href="https://github.com/aalimaslam" class="color-white"><i class="fa h3 fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/aalim-aslam-704789201/" class="color-white"><i class="fa h3 fa-linkedin"></i></a>
+        </div>
+    </div>
+    <div class="circle"></div>
+    <div class="decoration"></div>
+</div>  
+
+<style>
+    .decoration{
+        position:absolute;
+        top:60%;
+        left:45%;
+        border-radius:50%;
+        height:100px;
+        width:100px;
+        background:#da62c4;
+        z-index:-11;
+    }
+    .play-pause-btn{
+        position:absolute;
+        top:20px;
+        left:20px;
+    }
+    .helper{
+        font-family: "poppins";
+    }
+    a{
+        margin:10px;
+        display:inline-block;
+    }
+    .circle{
+        position:absolute;
+        top:40%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        width:600px;
+        height:600px;
+        background:rgba(255,255,255,0.01);
+        border:1px solid rgba(255,255,255,0.1);
+        backdrop-filter: blur(30px);
+        border-radius: 50%;
+        z-index:-1;
+    }
+    
+    .h1-argaham{
+        font-size: 5rem;
+        /* color:#da62c4; */
+    }
+    .hero{
+        min-height:85vh;
+    }
+    .title{
+        text-align:center;
+    }
+    .h6-poppins{
+        letter-spacing:5px;
+        color:#da62c4;
+    }
+    .scroll-inner div{
+        padding:8px;
+    }
+    .scroll-animate{
+        margin:20px 0;
+        border:1px solid #da62c4;
+        border-radius: 2000px;
+        /* padding:10px; */
+        overflow: hidden;
+        background:rgba(255,255,255,0.02);
+        backdrop-filter: blur(10px);
+        
+    }
+    .scroll-inner{
+        animation: scroll 25s infinite linear;
+        width:300px;
+        white-space: nowrap;
+
+    }
+    @keyframes scroll {
+        0% {
+            transform: translateX(180%);
+        }
+        100% {
+            transform: translateX(-160%);
+        }
+    }
+
+
+    @media screen and (max-width: 768px){
+        .circle{
+            width:300px;
+            height:300px;
+        }
+        .h1-argaham{
+            font-size: 3rem;
+        }  
+        .decoration{
+            top:20%;
+        }
+    }
+    @media screen and (max-width: 376px){
+        .circle{
+            width:200px;
+            height:200px;
+        }
+        .scroll-inner{
+            width:200px;
+        }
+        .decoration{
+            display:none;
+        }
+    }
+</style>
+
+
+<script>
+    let audio = new Audio('/intro.aac');
+    let playPauseBtn = document.querySelector('.play-pause-btn');
+    window.onload = function(){
+        audio.volume = 0.3;
+        audio.loop = true;
+        audio.play();
+    }
+    playPauseBtn.addEventListener("click", ()=>{
+        if(audio.paused){
+            audio.play();
+            playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+        }else{
+            audio.pause();
+            playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+        }
+    })
+    
+</script>

@@ -1,0 +1,46 @@
+.flex{
+    display:flex;
+}
+.place-center{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.justify-center{
+    display: flex;
+    justify-content:center;
+}
+.align-center{
+    display: flex;
+    align-items:center;
+}
+.flex-column{
+    flex-direction:column;
+}
+.flex-wrap{
+    flex-wrap:wrap;
+}
+.bold{
+    font-weight: 800;
+}
+.description{
+    color:gray;
+}
+.btn{
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.btn-primary{
+    background:#da62c4;
+    color:white;
+    border:1px solid rgba(255,255,255,0.4);
+}
+.color-primary{
+    color:#da62c4;
+}
+.color-white{
+    color:white;
+}

@@ -1,4 +1,8 @@
 ---
+import Overlay from '../components/Overlay.astro';
+
+
+
 export interface Props {
 	title: string;
 }
@@ -12,22 +16,50 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description">
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/images/logo.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<link rel="stylesheet" href="/Styles/Typography.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/Styles/Utitlity.css" />
+		<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+	  />
+	  <!-- Fontawesome CDN  -->
+	  <script src="https://kit.fontawesome.com/dad90080b4.js" crossorigin="anonymous"></script>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<title>{title} | aalimaslam.</title>
 	</head>
 	<body>
+		<Overlay />
 		<slot />
 	</body>
 </html>
 <style is:global>
+	@font-face{
+		font-family: "Agraham";
+		src: url("/Fonts/Agraham.otf");
+	}
+	*{
+		margin:0;
+		padding:0;
+		box-sizing: border-box;
+	}
 	:root {
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
 	}
-	html {
+	body {
+		cursor:url("/images/cursor2.svg"), auto;
 		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
+		/* background-image: radial-gradient(50% 50% at 50% 50%, rgb(26, 26, 26) 0%, rgb(0, 0, 0) 100%); */
+		background: radial-gradient(circle, #6c6c6c 10%, transparent 11%);
+
+        background-size: 3em 3em;
+        background-color: #111;
+        opacity: 0.8;
+		color:white;
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
